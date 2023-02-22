@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": 78.0322,
+        "lat": 30.3165
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 286.31,
+        "feels_like": 285.64,
+        "temp_min": 286.31,
+        "temp_max": 286.31,
+        "pressure": 1020,
+        "humidity": 75,
+        "sea_level": 1020,
+        "grnd_level": 944
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 4.45,
+        "deg": 60,
+        "gust": 7.41
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1675068626,
+    "sys": {
+        "country": "IN",
+        "sunrise": 1675042809,
+        "sunset": 1675081308
+    },
+    "timezone": 19800,
+    "id": 1273313,
+    "name": "Dehra Dūn",
+    "cod": 200
+}
