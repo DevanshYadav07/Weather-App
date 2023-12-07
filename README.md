@@ -1,5 +1,5 @@
 ### Deployment
-LIVE LINK -->(https://lnkd.in/dNDy6-zv) 
+LIVE LINK -->(https://weather-app-lemon-iota.vercel.app/) 
 
 
 ## Available Scripts
