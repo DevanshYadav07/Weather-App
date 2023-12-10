@@ -1,107 +1,194 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
+/* css for webpage */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-body {
+
+body{
+  margin: 0%;
+  padding: 0%;
+  background-color: aquamarine;
+  background-image: url('./assets/IMG_6201.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   margin: 0;
   font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(227, 227, 222);
-}
+  background-color:black;
 
-p {
-  font-size: 1.4rem;
-}
-h1 {
-  font-size: 4rem;
+
 }
 
 /* styling outer container */
-.app {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: aliceblue;
-}
-/* add  background image */
-.app:before {
-  content: "";
-  background-repeat: no-repeat;
-  background: url("./assets/IMG_6201.jpg") center center/cover;
-  position: absolute;
+.container {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-/* search box */
-.app .search
-{
-  text-align: center;
-   padding: 1rem; 
+ 
+  color: aliceblue;
+  /* position: relative; */
+  /* border: 3px solid red; */
 
 }
-.app input
-{
-  padding: .7rem 1.5rem;
+
+/* search box */
+.container .search {
+  text-align: center;
+  padding: 1rem;
+  /* to remove */
+
+}
+.container input {
+  padding: 0.7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
-  border:3px solid rgba(255,255,255,0.5) ;
+  border: 3px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.1);
-  color:white;
+  color: white;
 }
 /* container  */
-::placeholder{
-  color:whitesmoke;
-}
-.container {
-  /* background-color: red; */
-  max-width: 700px;
-  height: 525px;
-  margin: auto;
-  padding: 0 1.2rem;
-  position: relative;
-  top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+::placeholder {
+  color: whitesmoke;
 }
 
-.app .top {
+.container-sub {
+  /* background-color: red; */
+  max-width: 700px;
+  height: auto;
+  margin: auto;
+  margin-top: 1.5rem;
+  padding: 0 1.2rem;
+  top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+/* font-size: 2em; Default size */
+
+/* MEDIA QUERIES  */
+
+/* MOBILE DEVICES */
+@media (max-width: 480px) {
+  .container {
+    font-size: 0.5em;
+  }
+  .container input
+  {
+    font-size: 0.6em;
+    padding: 1em 1em;
+  }
+  .container .search{
+    padding: .5em;
+  }
+}
+
+/* LOW RES TABLET  DEVICES */
+@media (min-width: 481px) and (max-width: 770px) {
+  .container {
+    font-size: 1.2em;
+  } /* Adjust for even smaller screens */
+}
+
+/* TABLET */
+@media (min-width: 770px) and (max-width: 1024px) {
+  .container {
+    font-size: 1.5em;
+  }
+}
+
+/* LARGE DEVICES */
+@media (min-width: 1025px) and (max-width: 1500px) {
+    .container{
+      font-size: 1.8em;
+    }
+  }
+
+
+  
+.container .top {
   width: 100%;
   margin: 1rem auto;
 }
 
-.app .description {
+.container .description {
   position: relative;
-  right: -90%;
+  /* right: -90%;
   transform-origin: 0 0;
-  transform: rotate(270deg);
+  transform: rotate(270deg); */
 }
 
 /* bottom part */
-.app .bottom {
+.container .bottom {
   /* border-style: dashed;
   border-color: red; */
   display: flex;
   justify-content: space-evenly;
   /* align-items:center; */
- text-align: center;
+  text-align: center;
   width: 100%;
+  height: 100%;
   margin: 1rem auto;
-  padding : 1rem ;
+  padding: 1rem;
   border-radius: 13px;
-  
-  background-color:rgba(255, 255, 255, 0.3);
+
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.bold
-{
+.bold {
   font-weight: 700;
+}
+
+
+/*  CSS FOR SKELETON  */
+
+.skeleton
+{
+  opacity: 0.5;
+  animation: skeleton-loading 1.3s linear infinite alternate ;
+
+}
+
+.skeleton-text
+{
+  width: 100%;
+  height: 0.5em;
+  margin-bottom: .25em;
+  border-radius: 0.125em;
+}
+
+@keyframes skeleton-loading 
+{
+  0%
+  {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100%
+  {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.t1
+{
+  width: 15%;
+  height: .75em;
+}
+.t2
+{
+  width: 30%;
+  height: 1.25em ;
+
+}
+
+.t3
+{
+  margin-top: .8em;
+  padding: 1.5em;
+
 }
