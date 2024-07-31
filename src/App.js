@@ -76,16 +76,16 @@ function App() {
               </div>
               {/* bottom part  */}
               {data.name !== undefined &&
-                <div className='bottom grid  sm:grid-cols-3  grid-cols-1 gap-4 p-4'>
-                  <div className='feels text-sm  flex flex-col items-center justify-center rounded-md bg-[#d2cece]'>
+                <div className='bottom grid  sm:grid-cols-3  grid-cols-1 gap-4 p-4 '>
+                  <div className='feels text-sm sm:text-xl flex flex-col items-center justify-center rounded-md '>
                     {data.main ? <p>{data.main.feels_like.toFixed()}°C</p> : null}
                     <p className='bold'>Feels like</p>
                   </div>
-                  <div className='humidity text-sm flex flex-col items-center justify-center rounded-md bg-[#d2cece]'>
+                  <div className='humidity text-sm sm:text-xl  flex flex-col items-center justify-center rounded-md '>
                     {data.main ? <p >{data.main.humidity}%</p> : null}
                     <p className='bold'>Humidity</p>
                   </div>
-                  <div className='wind text-sm flex flex-col items-center justify-center rounded-md bg-[#d2cece]'>
+                  <div className='wind text-sm sm:text-xl flex flex-col items-center justify-center rounded-md '>
                     {data.wind ? <p>{data.wind.speed.toFixed()} Km/h</p> : null}
                     <p className='bold'>Wind</p>
                   </div>
