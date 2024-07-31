@@ -36,11 +36,12 @@ function App() {
 
   }
   return (
-    <div className='container'>
+    <div className='container '   >
       {/* having input feild to take city name  */}
-      <div className='search'>
+      <div className='search mb-8 pa-2 mt-5'>
         <input
           type="text"
+          className=''
           placeholder='Enter City'
           value={location}
           onChange={event => setLocation(event.target.value)}
@@ -51,17 +52,17 @@ function App() {
 
       {loading
         ? (
-          <div className='container-sub'>
-            <div className='skeleton skeleton-text t1'></div>
+          <div className='container-sub  mt-10'>
+            <div className='skeleton skeleton-text t1 text-xl'></div>
             <div className='skeleton skeleton-text  t2'></div>
             <div className='skeleton skeleton-text t1'></div>
             <div className='skeleton skeleton-text t3'></div>
           </div>
         ) : (
           <>
-            <div className='container-sub'>
+            <div className='container-sub'  >
               <div className='top'>
-                <div className='location'>
+                <div className='location text-xl'>
                   <p>{data.name}</p>
                   <div className='location-temp'>
 
@@ -75,23 +76,21 @@ function App() {
               </div>
               {/* bottom part  */}
               {data.name !== undefined &&
-                <div className='bottom'>
-                  <div className='feels'>
+                <div className='bottom grid  sm:grid-cols-3  grid-cols-1 gap-4 p-4'>
+                  <div className='feels text-sm  flex flex-col items-center justify-center rounded-md bg-[#d2cece]'>
                     {data.main ? <p>{data.main.feels_like.toFixed()}°C</p> : null}
                     <p className='bold'>Feels like</p>
                   </div>
-                  <div className='humidity'>
-                    {data.main ? <p>{data.main.humidity}%</p> : null}
-                    <p className='bold'>humidity</p>
+                  <div className='humidity text-sm flex flex-col items-center justify-center rounded-md bg-[#d2cece]'>
+                    {data.main ? <p >{data.main.humidity}%</p> : null}
+                    <p className='bold'>Humidity</p>
                   </div>
-                  <div className='wind'>
-                    {data.wind ? <p>{data.wind.speed.toFixed()}Km/h</p> : null}
+                  <div className='wind text-sm flex flex-col items-center justify-center rounded-md bg-[#d2cece]'>
+                    {data.wind ? <p>{data.wind.speed.toFixed()} Km/h</p> : null}
                     <p className='bold'>Wind</p>
                   </div>
-                </div>}
-
-
-
+                </div>
+              }
 
             </div>
           </>
